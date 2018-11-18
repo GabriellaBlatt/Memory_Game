@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="mg.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Old+Standard+TT" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        Magical Memory 
+        <button id="newGame">New Game</button>
+    </div>
+    <section class="memory-game">
+        <div class="memory-card" data-card="2">
+            <img class="front-face" src="./img/2.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+        <div class="memory-card" data-card="2">
+            <img class="front-face" src="./img/2.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+
+        <div class="memory-card" data-card="que">
+            <img class="front-face" src="./img/que.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+        <div class="memory-card" data-card="que">
+            <img class="front-face" src="./img/que.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+
+        <div class="memory-card" data-card="jok">
+            <img class="front-face" src="./img/jok.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+        <div class="memory-card" data-card="jok">
+            <img class="front-face" src="./img/jok.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+
+        <div class="memory-card" data-card="ace">
+            <img class="front-face" src="./img/ace.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+        <div class="memory-card" data-card="ace">
+            <img class="front-face" src="./img/ace.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+
+        <div class="memory-card" data-card="7">
+            <img class="front-face" src="./img/7.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+        <div class="memory-card" data-card="7">
+            <img class="front-face" src="./img/7.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+
+        <div class="memory-card" data-card="9">
+            <img class="front-face" src="./img/9.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+        <div class="memory-card" data-card="9">
+            <img class="front-face" src="./img/9.svg" />
+            <img class="back-face" src="./img/card.png" />
+        </div>
+    </section>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <a class="close" href=#>×</a>
+            <div class="content-1">
+                Congratulations you're a winner!
+            </div>
+            <button id="play-again">Let's play again!</button>
+        </div>
+    </div>
+
+    <script src="mg.js"></script>
+</body>
+
+</html>

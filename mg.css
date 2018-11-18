@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./img/back2.jpg");
+  background-size: cover;
+  
+}
+
+#title{
+    font-family:'Old Standard TT', serif;
+    color: rgb(169, 173, 177);
+    font-size: 8vh;
+    text-align: center;
+    margin: 10px;
+}
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  flex-wrap: wrap;
+  perspective: 800px;
+  display: flex;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d ;
+  transition: transform .5s;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.match {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1.2s, opacity 1.2s linear;
+}
+
+button#newGame{
+    background-color: rgb(169, 173, 177);
+    font-family:'Old Standard TT', serif;
+    border-radius: 3px;
+    height: 5vh;
+    text-align: center;
+    padding: 10px;
+    align-content: center;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(3, 3, 3, 0.7);
+    display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+  
+.popup {
+    padding: 30px;
+	margin: 300px auto;
+    background: #000000;
+    color: #ffffff;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+    transition: all 5s ease-in-out;
+    font-size: 4.5vh;
+	font-family: 'Old Standard TT', serif;
+}
+  
+.popup h2 {
+	margin-top: 0;
+	color: rgb(41, 39, 39);
+	font-family:'Old Standard TT', serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: rgb(192, 7, 7);
+}
+
+.popup .content-1,
+.content-2 {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+#play-again {
+	background-color: #ffffff;
+	padding: 2vh;
+	font-size: 7vh;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	font-family: 'Old Standard TT', serif;
+	color: rgb(182, 3, 3);
+	border-radius: 5px;
+}
